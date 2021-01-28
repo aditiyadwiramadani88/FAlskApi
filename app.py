@@ -43,6 +43,7 @@ def details(id):
         return {'msg': 'sucess delete data'}, status.HTTP_204_NO_CONTENT
     return {'nama': data.first().nama}
            
-
+if __name__ == '__main__':
+       app.run(threaded=True, port=5000)
     
     
