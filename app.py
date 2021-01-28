@@ -1,9 +1,10 @@
 from flask_api import FlaskAPI,status
 from flask import request
+from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
-
-
 app = FlaskAPI(__name__)
+CORS(app)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///main.db'
 db = SQLAlchemy(app)
 
